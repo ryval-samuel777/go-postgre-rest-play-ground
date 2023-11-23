@@ -1,45 +1,55 @@
-# Welcome to My Playground 
-this is place to playing simple REST API using Golang & PostgreSQL 
+# Welcome to My Playground
 
-## This Repo Still Under Construction 
-Building ... 
+Welcome to the playground for experimenting with a simple REST API using Golang and PostgreSQL.
 
-## Requirement To Using This Playground 
-### instal the core tools
-just read their offcial documentation for installing
-- installing docker & docker compose 
-- installing golang 
-### build the database 
-- first, in CLI/CMD/Terminal go to db folder and running ``` docker compose up -d ``` 
-and waiting the process instaling done
-- second, open your browser and go to this url ``` localhost:5050 ``` and login using the email & password
-on compose.yaml(that's file on db folder) 
-- third, add new server database, on general section give that new name, next choose the connection section and input with the ipAddress, port, username and password following on the compose.yaml <br> 
-for ip address just open your CMD/Terminal and type this ``` docker inspect postgres_c ``` and you will see the ip address. if the command error on linux error just running with sudo.  
-### run/build the REST API
-- first, go to folder where's the main.go exist and running this command  
-``` go run . ```. if you want the binary file just using ``` go build ```
-and the binary file will appear
+## Repo Under Construction
 
+This repository is currently under construction as we build and enhance its features.
 
-## Golang 
-There's some framework using on Golang 
-- Gorila/Mux
-- GORM 
-- etc 
+## Requirements for Using This Playground
 
-## Database 
-There's 2 technology, has been using on this repo:  
-- PostgreSQL 
-is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.
-- PGAdmin4 
-pgAdmin is the leading Open Source management tool for Postgres, the world's most advanced Open Source database. pgAdmin 4 is designed to meet the needs of both novice and experienced Postgres users alike, providing a powerful graphical interface that simplifies the creation, maintenance and use of database objects.
+### Install the Core Tools
+Ensure you have the necessary tools installed by referring to their official documentation:
+- Docker & Docker Compose
+- Golang
 
-## Docker 
-for deploy the postgreSQL and PGadmin4 on local host :)
+### Build the Database
+1. In your CLI/CMD/Terminal, navigate to the 'db' folder and run the command:
+   ```bash
+   docker compose up -d
+   ```
+   Wait for the installation process to complete.
 
-## Why Using Golang, PostgreSQL, Docker & Docker Compose ?
-simple i just want to practice and i want people can using <br>
-this repo to learn to make REST API using Golang <br>
-And using PostgreSQL as the Database. And Docker just using for isolated
-The postgreSQL & PGadmin4 also for make the friendly for My Env PC :) 
+2. Open your browser and visit [localhost:5050](http://localhost:5050) that's the PGadmin4. Log in using the email and password specified in the 'compose.yaml' file.
+
+3. Add a new database server. In the general section, provide a name. In the connection section, input the IP address, port, username, and password from the 'compose.yaml' file.
+   - To find the IP address, open your CMD/Terminal and type:
+     ```bash
+     docker inspect postgres_c
+     ```
+     If you encounter an error on Linux, run the command with sudo.
+
+### Run/Build the REST API
+1. Navigate to the folder containing 'main.go' and run:
+   ```bash
+   go run .
+   ```
+   To generate a binary file, use:
+   ```bash
+   go build
+   ```
+   The binary file will appear.
+
+## Golang
+The playground uses various Golang frameworks, including Gorilla/Mux.
+
+## Database
+Two technologies are employed:
+- **PostgreSQL:** An object-relational database management system (ORDBMS) focusing on extensibility and standards-compliance.
+- **pgAdmin4:** The leading open-source management tool for Postgres, providing a powerful graphical interface for creating, maintaining, and using database objects.
+
+## Docker
+Utilized for deploying PostgreSQL and pgAdmin4 on the local host.
+
+## Why Golang, PostgreSQL, Docker & Docker Compose?
+This playground is designed for learning how to create REST APIs using Golang and PostgreSQL. Docker and Docker Compose are employed for environment isolation, making it easy for users to set up PostgreSQL and pgAdmin4 locally. Happy coding!
