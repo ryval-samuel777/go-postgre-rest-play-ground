@@ -4,6 +4,24 @@ this is place to playing simple REST API using Golang & PostgreSQL
 ## This Repo Still Under Construction 
 Building ... 
 
+## Requirement To Using This Playground 
+### instal the core tools
+just read their offcial documentation for installing
+- installing docker & docker compose 
+- installing golang 
+### build the database 
+- first, in CLI/CMD/Terminal go to db folder and running ``` docker compose up -d ``` 
+and waiting the process instaling done
+- second, open your browser and go to this url ``` localhost:5050 ``` and login using the email & password
+on compose.yaml(that's file on db folder) 
+- third, add new server database, on general section give that new name, next choose the connection section and input with the ipAddress, port, username and password following on the compose.yaml <br> 
+for ip address just open your CMD/Terminal and type this ``` docker inspect postgres_c ``` and you will see the ip address. if the command error on linux error just running with sudo.  
+### run/build the REST API
+- first, go to folder where's the main.go exist and running this command  
+``` go run . ```. if you want the binary file just using ``` go build ```
+and the binary file will appear
+
+
 ## Golang 
 There's some framework using on Golang 
 - Gorila/Mux
