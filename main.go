@@ -14,7 +14,7 @@ var db *sql.DB
 
 func initDB() *sql.DB {
 	// Update your PostgreSQL connection string with Docker host IP and port
-	connStr := "user=root password=root dbname=my_db host=172.18.0.3 port=5432 sslmode=disable"
+	connStr := "user=root password=root dbname=my_db host=172.18.0.2 port=5432 sslmode=disable"
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		log.Fatal(err)
